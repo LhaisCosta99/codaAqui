@@ -21,3 +21,14 @@ function conversor (string){
 
     return saida.join("")
 }
+
+function decodificador(string){
+    const chaves = Object.values(dicionario)
+    let saida = string
+    
+    chaves.forEach(el => {
+        saida = saida.split(el).join(el[0])
+    })
+
+    return saida
+}
