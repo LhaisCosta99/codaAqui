@@ -22,6 +22,25 @@ criptografar.addEventListener("click", (event)=> {
     }
 })
 
+decriptografar.addEventListener("click", (event)=> {
+    event.preventDefault()
+    if(mensagem.value){
+        const resposta = decodificador(mensagem.value)
+    
+        resultado.innerHTML = `
+            <h2>Resultado da sua mensagem:</h2>
+            <p>${resposta}</p>
+        `
+    
+        mensagem.value = ""
+    } else {
+        resultado.innerHTML = `
+        <h2>Nenhuma mensagem encontrada</h2>
+        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        `
+    }
+})
+
 const dicionario = {
     a: "ai",
     e: "enter",
