@@ -2,17 +2,19 @@ const mensagem = document.getElementById("mensagem")
 const criptografar = document.getElementById("criptografar")
 const decriptografar = document.getElementById("decriptografar")
 const resultado = document.getElementById("resultado")
+const copiar = document.getElementById("copiar")
+let resposta =""
 
-criptografar.addEventListener("click", (event)=> {
+criptografar.addEventListener("click", (event) => {
     event.preventDefault()
-    if(mensagem.value){
-        const resposta = codificador(mensagem.value)
-    
+    if (mensagem.value) {
+        resposta = codificador(mensagem.value)
+
         resultado.innerHTML = `
             <h2>Resultado da sua mensagem:</h2>
-            <p>${resposta}</p>
+            <p id="resposta">${resposta}</p>
         `
-    
+
         mensagem.value = ""
     } else {
         resultado.innerHTML = `
@@ -22,16 +24,16 @@ criptografar.addEventListener("click", (event)=> {
     }
 })
 
-decriptografar.addEventListener("click", (event)=> {
+decriptografar.addEventListener("click", (event) => {
     event.preventDefault()
-    if(mensagem.value){
-        const resposta = decodificador(mensagem.value)
-    
+    if (mensagem.value) {
+        resposta = decodificador(mensagem.value)
+
         resultado.innerHTML = `
             <h2>Resultado da sua mensagem:</h2>
-            <p>${resposta}</p>
+            <p id="resposta">${resposta}</p>
         `
-    
+
         mensagem.value = ""
     } else {
         resultado.innerHTML = `
@@ -49,11 +51,11 @@ const dicionario = {
     u: "ufat"
 }
 
-function codificador (string){
+function codificador(string) {
     const entrada = string.split("")
 
     const saida = entrada.map(el => {
-        if(dicionario[el]){
+        if (dicionario[el]) {
             return dicionario[el]
         } else {
             return el
@@ -63,13 +65,20 @@ function codificador (string){
     return saida.join("")
 }
 
-function decodificador(string){
+function decodificador(string) {
     const chaves = Object.values(dicionario)
     let saida = string
-    
+
     chaves.forEach(el => {
         saida = saida.split(el).join(el[0])
     })
 
     return saida
 }
+
+copiar.addEventListener('click', () => {
+    if(resposta !== ""){
+        navigator.clipboard.writeText(resposta)
+    }
+});
+
