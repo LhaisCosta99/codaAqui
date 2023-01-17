@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Codifica Aqui!</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="codifica.js" defer></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Codifica Aqui!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="codifica.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
 
-    <body>
-        <header>
-            <img class="logo" src="./assets/Vector.png" alt="Letra A cor Azul">
-        </header>
-        <main>
-            <label for="mensagem"><h2>Digite Sua Mensagem Secretra:</h2>
-                <textarea cols="60" rows="10" id="mensagem" class="input-padrao" required></textarea>
+<body>
+    <header>
+        <img class="logo" src="./assets/Vector.png" alt="Letra A cor Azul">
+    </header>
+    <main>
+        <label for="mensagem">
+            <h2>Digite Sua Mensagem Secretra:</h2>
+            <textarea cols="70" rows="20" id="mensagem" class="input-padrao" required></textarea>
 
-                <div>
-                    <button type="submit" class="enviar" id="criptografar">Criptografar</button>
-        
-                    <button type="submit" class="enviar" id="decriptografar">Descriptografar</button>
-                </div>
-    
-            </label>
-            <div>
-                <img class="imagemLado" src="./assets/imagemlado.png.svg" alt="Pessoa de joelhos usando uma lupa">
-                <div id="resultado">
-                    <h2>Nenhuma mensagem encontrada</h2>
-                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-                </div>
-                
-                <button id="copiar">Copiar</button>
-                
+            <div class="alerta">
+                <img src="assets/Alerta.png" alt="ponto de interrogação">
+                <h6>Apenas letras minúsculas e sem acento.</h6>
             </div>
-        </main>
-        <footer>
-            <p class="copyrigth"> Mais Contatos </p>
-            <a href="https://www.linkedin.com/in/lhaiscosta-dev/">
-                <p> Lhaís Costa 2023© </p>
-            </a>
-        </footer>
-    </body>
 
-    </html>
+            <div>
+                <button type="submit" class="enviar" id="criptografar">Criptografar</button>
+
+                <button type="submit" class="enviar" id="decriptografar">Descriptografar</button>
+            </div>
+
+        </label>
+        <div>
+            <img class="imagemLado" src="./assets/imagemlado.png.svg" alt="Pessoa de joelhos usando uma lupa">
+            <div id="resultado">
+                <h2>Nenhuma mensagem encontrada</h2>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+
+            <button id="copiar">Copiar</button>
+
+        </div>
+    </main>
+    <footer>
+        <p class="copyrigth"> Mais Contatos </p>
+        <a href="https://www.linkedin.com/in/lhaiscosta-dev/">
+            <p> Lhaís Costa 2023© </p>
+        </a>
+    </footer>
+</body>
+
+</html>
