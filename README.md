@@ -9,10 +9,10 @@
 
 ## Sobre
 Esse projeto é um  site  de criptografia de mensagem. <br>
-A lógica foi contruida através de um dicionário em javascript, que transforma as vogais "minúsculas".<br> 
+A lógica foi construida através de um dicionário em javascript, que transforma as vogais "minúsculas".<br> 
 Sendo possivel assim criptografar ou descriptografar a mensgem que desejar.<br>
-Foi desenvolvido seguindo o máximo detaletes fornecido pelo design.<br>
-O objetivo era transformar este layout em uma página funcional através de uma lógica mais simples.
+Foi desenvolvido seguindo o máximo detalhes fornecido pelo design.<br>
+O objetivo era transformar o layout em uma página funcional através de uma lógica mais simples.
 
 ## :small_blue_diamond: Conheça o Site :small_blue_diamond:
 https://lhaiscosta99.github.io/codificaAqui/
